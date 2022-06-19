@@ -52,4 +52,4 @@ The following technologies were used in creating of this website:
 #### __Sergey Litvinenko__
 #### **_19/06/2022_**
 
-<img src="./images/Prakticum.png" width="183px">
+<img src="./src/images/Prakticum.png" width="183px">
