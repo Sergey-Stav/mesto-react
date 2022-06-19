@@ -20,9 +20,6 @@ function Main(props) {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
-
-  useEffect(() => {
     api
       .getCards()
       .then((data) => {
