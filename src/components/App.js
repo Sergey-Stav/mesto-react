@@ -153,14 +153,16 @@ function App() {
     const isOwn = card.owner._id === currentUser._id;
 
     if (isOwn) {
-      api.deleteCard(card).then(() => {
-        setCards((state) => {
-          return state.filter((item) => item._id !== card._id);
+      api
+        .deleteCard(card)
+        .then(() => {
+          setCards((state) => {
+            return state.filter((item) => item._id !== card._id);
+          });
+        })
+        .catch((err) => {
+          console.log(err);
         });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
     }
   };
   return (
