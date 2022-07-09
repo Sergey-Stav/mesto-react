@@ -23,7 +23,7 @@ Web-разработчик от Яндекс.Практикум
 - API
 
 #### __Сергей Литвиненко__
-#### **_19/06/2022_**
+#### **_09/07/2022_**
 
 # Project: Mesto-react
 
@@ -50,6 +50,6 @@ The following technologies were used in creating of this website:
 - API
 
 #### __Sergey Litvinenko__
-#### **_19/06/2022_**
+#### **_09/07/2022_**
 
 <img src="./src/images/Prakticum.png" width="183px">

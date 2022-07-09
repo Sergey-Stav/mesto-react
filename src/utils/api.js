@@ -82,13 +82,11 @@ class Api {
   }
 
   //Метод отправки нового аватара на сервер
-  setUserAvatar(avatar_link) {
+  setUserAvatar(data) {
     return fetch(`${this._url}/users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
-      body: JSON.stringify({
-        avatar: avatar_link,
-      }),
+      body: JSON.stringify(data),
     }).then(this._handleResponseOfServer);
   }
 }
