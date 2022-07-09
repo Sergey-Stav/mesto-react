@@ -62,6 +62,28 @@ function App() {
     setIsAddPlacePopupOpen(false);
     setIsImagePopupOpen(false);
   };
+
+  //Закрытие popups по ESC
+  const isOpen =
+    isEditAvatarPopupOpen ||
+    isEditProfilePopupOpen ||
+    isAddPlacePopupOpen ||
+    isImagePopupOpen;
+
+  useEffect(() => {
+    function closeByEscape(evt) {
+      if (evt.key === "Escape") {
+        closeAllPopups();
+      }
+    }
+    if (isOpen) {
+      document.addEventListener("keydown", closeByEscape);
+      return () => {
+        document.removeEventListener("keydown", closeByEscape);
+      };
+    }
+  }, [isOpen]);
+
   const handleUpdateUser = (data) => {
     api
       .setUserInfo(data)
@@ -135,6 +157,9 @@ function App() {
         setCards((state) => {
           return state.filter((item) => item._id !== card._id);
         });
+      })
+      .catch((err) => {
+        console.log(err);
       });
     }
   };
